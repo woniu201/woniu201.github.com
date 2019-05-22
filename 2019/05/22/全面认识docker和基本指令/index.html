@@ -6,19 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>优秀的程序员一定要有自己的博客！ | Hexo</title>
+  <title>全面认识docker和基本指令 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="公众号Java架构师之路id：Java-Road 简介：专注Java技术分享，定期分享优质技术文章，还有高薪内推职位。">
+  <meta name="description" content="Docker逐渐成为虚拟化技术的佼佼者，接下来会推出一系列的Docker相关技术文章，Docker技术也是架构师的必备技能。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="优秀的程序员一定要有自己的博客！">
-<meta property="og:url" content="http://yoursite.com/2019/05/22/优秀的程序员一定要有自己的博客！/index.html">
+<meta property="og:title" content="全面认识docker和基本指令">
+<meta property="og:url" content="http://yoursite.com/2019/05/22/全面认识docker和基本指令/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="公众号Java架构师之路id：Java-Road 简介：专注Java技术分享，定期分享优质技术文章，还有高薪内推职位。">
+<meta property="og:description" content="Docker逐渐成为虚拟化技术的佼佼者，接下来会推出一系列的Docker相关技术文章，Docker技术也是架构师的必备技能。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-22T03:53:54.713Z">
+<meta property="og:image" content="https://notecdn.yiban.io/cloud_res_dev/112289375/imgs/19-4-15_10:02:54.136_79074.png">
+<meta property="og:image" content="https://notecdn.yiban.io/cloud_res_dev/112289375/imgs/19-4-15_10:02:54.144_25501.png">
+<meta property="og:image" content="https://notecdn.yiban.io/cloud_res_dev/112289375/imgs/19-4-15_10:02:54.226_54396.jpeg">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190408092311189.jpg">
+<meta property="og:updated_time" content="2019-05-22T07:53:33.319Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="优秀的程序员一定要有自己的博客！">
-<meta name="twitter:description" content="公众号Java架构师之路id：Java-Road 简介：专注Java技术分享，定期分享优质技术文章，还有高薪内推职位。">
+<meta name="twitter:title" content="全面认识docker和基本指令">
+<meta name="twitter:description" content="Docker逐渐成为虚拟化技术的佼佼者，接下来会推出一系列的Docker相关技术文章，Docker技术也是架构师的必备技能。">
+<meta name="twitter:image" content="https://notecdn.yiban.io/cloud_res_dev/112289375/imgs/19-4-15_10:02:54.136_79074.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -154,29 +159,131 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-优秀的程序员一定要有自己的博客！" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-全面认识docker和基本指令" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      优秀的程序员一定要有自己的博客！
+      全面认识docker和基本指令
     </h1>
   
 
         
-        <a href="/2019/05/22/优秀的程序员一定要有自己的博客！/" class="archive-article-date">
-  	<time datetime="2019-05-22T03:40:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
+        <a href="/2019/05/22/全面认识docker和基本指令/" class="archive-article-date">
+  	<time datetime="2019-05-22T07:49:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="公众号Java架构师之路"><a href="#公众号Java架构师之路" class="headerlink" title="公众号Java架构师之路"></a>公众号Java架构师之路</h3><pre><code>id：Java-Road
-简介：专注Java技术分享，定期分享优质技术文章，还有高薪内推职位。
-</code></pre>
+        <p>Docker逐渐成为虚拟化技术的佼佼者，接下来会推出一系列的Docker相关技术文章，Docker技术也是架构师的必备技能。</p>
+<a id="more"></a>
+<h2 id="什么是Docker"><a href="#什么是Docker" class="headerlink" title="什么是Docker"></a><strong>什么是Docker</strong></h2><p>Docker 是一个开源的应用容器引擎，基于Go语言，诞生于2013年初，最初发起者是dotCloud公司，开发者可以打包应用到一个轻量级、可移植的容器中，然后发布到主流Linux系统上运行。</p>
+<h2 id="为什么用Docker"><a href="#为什么用Docker" class="headerlink" title="为什么用Docker"></a>为什么用Docker</h2><ul>
+<li><p>持续交付和部署：使用Docker可以通过定制应用镜像来实现持续集成，持续交付，部署。开发人员构建后的镜像，结合持续集成系统进行集成测试，而运维人员则可以在生产环境中快速部署该镜像，也可以结合持续部署系统进行自动部署。</p>
+</li>
+<li><p>更高效的资源利用：Docker是基于内核级的虚拟化，可以实现更高效的性能，同时对资源的额外需求很低，相比传统虚拟机方式，相同配置的主机能够运行更多的应用。</p>
+</li>
+<li><p>更轻松的迁移和扩展：Docker容器几乎可以在任何平台上运行，同时支持主流的操作系统发行版本。</p>
+</li>
+<li><p>更快速的启动时间：传统的虚拟机技术启动应用服务往往需要数分钟，而Docker容器应用，由于直接运行于宿主内核，无需启动完整的操作系统，因此可以做到妙级，甚至毫秒级的启动时间，大大的节约了开发，测试，部署的时间。</p>
+</li>
+</ul>
+<h2 id="Docker与传统虚拟机差异"><a href="#Docker与传统虚拟机差异" class="headerlink" title="Docker与传统虚拟机差异"></a>Docker与传统虚拟机差异</h2><p><img src="https://notecdn.yiban.io/cloud_res_dev/112289375/imgs/19-4-15_10:02:54.136_79074.png" alt></p>
+<p><strong>                                                                   传统虚拟化方式</strong></p>
+<p><img src="https://notecdn.yiban.io/cloud_res_dev/112289375/imgs/19-4-15_10:02:54.144_25501.png" alt></p>
+<p><strong>                                                                  Docker虚拟化方式</strong></p>
+<p>传统虚拟化是在硬件层面实现虚拟化，需要有额外的虚拟机管理应用和虚拟机操作系统层，而Docker容器是在操作系统层面实现虚拟化，直接复用本地主机操作系统，更加轻量级。</p>
+<h2 id="核心概念"><a href="#核心概念" class="headerlink" title="核心概念"></a>核心概念</h2><ul>
+<li><p>Docker镜像：类似于虚拟机里的镜像，是一个只读的模板，一个独立的文件系统，使用镜像可以创建容器，可以理解为镜像是容器的基石。</p>
+</li>
+<li><p>Docker容器：是由Docker镜像创建的运行实例，类似于轻量级的沙箱，每个容器之间都是相互隔离的。支持的操作有启动，停止，删除等。</p>
+</li>
+<li><p>Docker仓库：类似于经常使用的代码仓库，如github，它是Docker集中存放镜像文件的仓所，国内也有网易，阿里等镜像仓库。                    </p>
+</li>
+</ul>
+<h2 id="镜像操作指令"><a href="#镜像操作指令" class="headerlink" title="镜像操作指令"></a>镜像操作指令</h2><ul>
+<li><p>获取镜像：</p>
+<p>docker pull centos    (默认获取centos最新的镜像)</p>
+<p>docker pull centos:7 (获取指定标签镜像)</p>
+</li>
+<li><p>查看本地镜像：</p>
+<p>docker images</p>
+</li>
+<li><p>查看镜像详细信息：</p>
+<p>docker inspect centos:7 </p>
+</li>
+<li><p>查看镜像历史：</p>
+<p>docker history centos:7</p>
+</li>
+<li><p>删除镜像：</p>
+<p>A:使用标签删除：docker rmi centos</p>
+<p>B:使用ID删除：docker rimi</p>
+</li>
+<li><p>构建镜像：</p>
+<p>A:使用docker commit命令</p>
+<p>B:使用Dockerfile构建</p>
+</li>
+</ul>
+<p>使用docker commit</p>
+<p>例：构建一个带有jdk的镜像</p>
+<p>按照如下步骤操作</p>
+<pre><code>[root@localhost ~]# docker run -it centos:7 /bin/bash[root@060793baf536 /]# yum install wget[root@060793baf536 /]# wget --no-check-certificate --no-cookies --header &quot;Cookie: oraclelicense=accept-securebackup-cookie&quot; http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163/jdk-8u131-linux-x64.rpm [root@060793baf536 /]# rpm -ivh jdk-8u131-linux-x64.rpmPreparing...                          ################################# [100%]Updating / installing...   1:jdk1.8.0_131-2000:1.8.0_131-fcs  ################################# [100%]Unpacking JAR files...        tools.jar...        plugin.jar...        javaws.jar...        deploy.jar...        rt.jar...        jsse.jar...        charsets.jar...        localedata.jar...[root@060793baf536 /]# exit[root@localhost ~]# docker commit 060793baf536 centos/jdk:2.0
+</code></pre><p>通过docker images命令可以看到新增了centos/jdk 标签为2.0的镜像</p>
+<p><strong>使用Dockerfile构建</strong></p>
+<p>实际使用中不推荐使用docker commit构建，应使用更灵活和强大的Dockerfile构建docker镜像，直接举例来认识Dockerfile。</p>
+<p>例：构建一个带有jdk的centos7镜像</p>
+<pre><code>[root@localhost Dockerfile]# mkdir Dockerfile[root@localhost Dockerfile]# cd Dockerfile
+</code></pre><p>编写Dockerfile：</p>
+<pre><code>FROM centos:7MAINTAINER  Java-Road &quot;Java-Road@qq.com&quot; RUN mkdir /usr/local/jdkCOPY jdk-8u171-linux-x64.rpm /usr/local/jdk/RUN rpm -ivh /usr/local/jdk/jdk-8u171-linux-x64.rpm
+</code></pre><p>执行如下指令：</p>
+<pre><code>[root@localhost Dockerfile]# docker build -t centos/jdk .
+</code></pre><p>运行结果如下：</p>
+<p><img src="https://notecdn.yiban.io/cloud_res_dev/112289375/imgs/19-4-15_10:02:54.226_54396.jpeg" alt></p>
+<p>docker images可以看到新生成的centos/jdk镜像。</p>
+<h2 id="容器操作指令"><a href="#容器操作指令" class="headerlink" title="容器操作指令"></a>容器操作指令</h2><ul>
+<li><p>创建启动容器：</p>
+<pre><code>[root@localhost ~]# docker run centos:7 /bin/echo&apos;hello world&apos;
+</code></pre></li>
+</ul>
+<pre><code>容器运行完后直接退出
+</code></pre><ul>
+<li><p>交互形式创建启动容器</p>
+<pre><code>[root@localhost ~]# docker run -it centos:7 /bin/bash[root@802e3623e566 /]# ps   PID TTY          TIME CMD     1 ?        00:00:00 bash    13 ?        00:00:00 ps[root@802e3623e566 /]# exit
+</code></pre><p>执行exit才能退出容器</p>
+</li>
+<li><p>守护状态运行容器</p>
+<pre><code>[root@localhost ~]# docker run -d centos:7 /bin/sh -c &quot;while true; do echo hello world; sleep 1; done&quot;
+</code></pre></li>
+</ul>
+<ul>
+<li><p>启动已有的容器：</p>
+<pre><code>docker start 容器ID例：[root@localhost ~]# docker start 802e3623e566
+</code></pre></li>
+<li><p>停止运行的容器：</p>
+<pre><code>docker stop 容器ID例：[root@localhost ~]# docker stop 802e3623e566
+</code></pre></li>
+<li><p>删除容器：</p>
+<pre><code>[root@localhost ~]# docker stop 89566e38c7fb[root@localhost ~]# docker rm 89566e38c7fb
+</code></pre></li>
+<li><p>进入运行的容器：</p>
+<pre><code>[root@localhost ~]# docker exec -it cbd8b1f35dcc /bin/bash
+</code></pre></li>
+</ul>
+<ul>
+<li><p>导出容器：</p>
+<pre><code>导出容器cbd8b1f35dcc到centos_test.tar文件 [root@localhost ~]# docker export -o centos_test.tar cbd8b1f35dcc 导出的tar文件可以在其他机器上，通过导入来重新运行
+</code></pre></li>
+<li><p>导入容器： </p>
+<pre><code>把导出的文件centos_test.tar通过docker import导入变成镜像 [root@localhost ~]# docker import centos_test.tar test/centos 通过docker images命令可以看到增加了个test/centos镜像
+</code></pre></li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20190408092311189.jpg" alt></p>
+<p><strong>欢迎关注公众号Java架构师之路，一个汇聚十万技术人的圈子，让学习之路更有趣！</strong></p>
+
       
 
       
@@ -255,7 +362,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/05/22/优秀的程序员一定要有自己的博客！/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/05/22/全面认识docker和基本指令/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -269,15 +376,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/05/22/全面认识docker和基本指令/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          全面认识docker和基本指令
-        
-      </div>
-    </a>
   
+    <a href="/2019/05/22/优秀的程序员一定要有自己的博客！/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">优秀的程序员一定要有自己的博客！</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
